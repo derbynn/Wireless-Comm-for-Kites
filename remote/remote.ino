@@ -175,13 +175,10 @@ void loop(void) {
   strcpy(radiopacket, payload.c_str());
   
   // send output to serial port for debugging and tracking
-  // Serial.print("Sending "); 
   Serial.println(radiopacket);  
-  // Serial.println("Sending...");
   delay(10);
   
   // Send packet via LoRa
-//  rf95.send((uint8_t *)radiopacket, payload_length + 1);
   rf95.send((uint8_t *)radiopacket, payload_length);
   delay(1);
   rf95.waitPacketSent();
