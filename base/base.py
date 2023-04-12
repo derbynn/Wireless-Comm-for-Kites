@@ -45,7 +45,7 @@ rfm9x.spreading_factor = 7
 
 
 def sendData():
-    #packet_count = 0
+    
     while True:    
         try:
 	'''
