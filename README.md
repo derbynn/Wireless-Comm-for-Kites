@@ -16,7 +16,7 @@ Displays: None
 Hardware: Raspberry Pi Zero 2W, LoRa unit\
 Code: Python 3 with compatible libraries\
 Serial port: Enabled via SSH\
-Message Latenncy (rate at which messages are received): ~ 1 message every 3 seconds
+Message Latency (rate at which messages are received): ~ 1 message every 3 seconds
 Indicators: LEDs\
 Displays: Touchscreen, external display compatible
 
