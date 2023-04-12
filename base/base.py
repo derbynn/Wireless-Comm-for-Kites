@@ -1,3 +1,8 @@
+'''
+This is code for the base unit. It establishes a connection with the LoRa module by initializing the pins for SPI communication, setting the frequency and spreading factor and also AWS.
+The base unit receives packets from the remote unit and moves the packets in JSON format to the AWS Cloud. 
+'''
+
 import os
 from dotenv import load_dotenv
 load_dotenv()
