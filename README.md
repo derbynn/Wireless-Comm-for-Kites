@@ -14,7 +14,7 @@ Message Latency (rate at which messages are sent) : ~ 1 message per second
 Hardware: Raspberry Pi Zero 2W, LoRa unit\
 Code: Python 3 with compatible libraries\
 Serial port: Enabled via SSH\
-Message Latenncy (rate at which messages are received): 1 message every 3 seconds
+Message Latenncy (rate at which messages are received): ~ 1 message every 3 seconds
 
 ## Cloud
 Hardware: None\
