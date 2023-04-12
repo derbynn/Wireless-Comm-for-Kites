@@ -50,5 +50,55 @@ This repository contains code written for the remote, base, and cloud parts of t
 4. Upon establishment of communication with the transmitting LoRa, the LoRa module will initiate reception and concurrently display the incoming packets on the terminal, while simultaneously transmitting it to AWS.
 
 ### Cloud
+Setting Up an AWS IoT for Raspberry pi connecction
+Setting up an AWS IoT account involves creating an AWS account, configuring AWS IoT services, and setting up IoT devices. Here are the steps to get started:
 
-Coming Soon!
+Sign up for an AWS account:
+If you don't already have an AWS account, go to https://aws.amazon.com/ and click 'Create an AWS Account'. Follow the instructions to complete the sign-up process.
+
+Sign in to the AWS Management Console:
+After creating an AWS account, sign in to the AWS Management Console at https://aws.amazon.com/console/.
+
+Access AWS IoT Core service:
+In the AWS Management Console, search for 'IoT Core' in the 'Find Services' search bar or select it from the list of services under the 'Internet of Things' category.
+
+Create a Thing:
+a. Click 'Manage' in the left-hand menu, and then click 'Things'.
+b. Click 'Create' and then 'Create a single thing'.
+c. Enter a name for your IoT device (Thing) and click 'Next'.
+d. (Optional) You can add attributes and a Thing type, but for a basic setup, just click 'Create Thing' without adding these.
+
+Create certificates and keys:
+a. After creating a Thing, you will be prompted to create certificates and keys. Click 'Create certificate'.
+b. Download the public key, private key, and certificate for your Thing.
+c. Click 'Activate' to activate the certificate.
+d. Click 'Done' to finish the process.
+
+Attach a policy to the certificate:
+a. Click 'Secure' in the left-hand menu, and then click 'Policies'.
+b. Click 'Create' to create a new policy.
+c. Enter a name for the policy and add statements to define permissions. For a basic setup, you can use the following statement to allow all IoT actions:
+
+```
+{
+   "Effect": "Allow",
+   "Action": "iot:*",
+   "Resource": "*"
+}
+```
+
+d. Click 'Create' to save the policy.
+e. Go back to the 'Certificates' section under the 'Secure' menu.
+f. Find the certificate you created earlier, click the three dots on the right, and select 'Attach policy'.
+g. Select the policy you just created and click 'Attach'.
+
+Attach the certificate to the Thing:
+a. Go back to the 'Certificates' section under the 'Secure' menu.
+b. Find the certificate you created earlier, click the three dots on the right, and select 'Attach thing'.
+c. Select the Thing you created and click 'Attach'.
+
+Set up your IoT device:
+Configure your IoT device(raspberry pi) to use the AWS IoT endpoint, the downloaded certificate, and private key to connect to AWS IoT Core. 
+
+Test your setup:
+After configuring your IoT device, test the connection to AWS IoT Core by subscribing to a topic or publishing messages to a topic. You can use the AWS IoT Core 'Test' feature in the console to monitor messages.
