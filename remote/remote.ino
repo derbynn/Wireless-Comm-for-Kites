@@ -13,13 +13,9 @@
 #include <SPI.h>
 #include <RH_RF95.h>
 
-#if defined(ESP8266)
-  /* for ESP w/featherwing */ 
-  #define RFM95_CS  2    // "E"
-  #define RFM95_RST 16   // "D"
-  #define RFM95_INT 15   // "B"
 
-#elif defined(ARDUINO_ADAFRUIT_FEATHER_ESP32S2) || defined(ARDUINO_NRF52840_FEATHER) || defined(ARDUINO_NRF52840_FEATHER_SENSE)
+
+#if defined(ARDUINO_NRF52840_FEATHER) || defined(ARDUINO_NRF52840_FEATHER_SENSE)
   #define RFM95_INT     9  // "A"
   #define RFM95_CS      10  // "B"
   #define RFM95_RST     12  // "C"
