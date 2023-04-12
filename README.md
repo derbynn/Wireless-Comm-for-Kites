@@ -16,7 +16,7 @@ Displays: None
 Hardware: Raspberry Pi Zero 2W, LoRa unit\
 Code: Python 3 with compatible libraries\
 Serial port: Enabled via SSH\
-Message Latency (rate at which messages are received): ~ 1 message every 3 seconds
+Message Latency (rate at which messages are received): ~ 1 message every 3 seconds\
 Indicators: LEDs\
 Displays: Touchscreen, external display compatible
 
@@ -25,4 +25,5 @@ Hardware: None\
 Code: Query Language for AWS Timestream, other programming langauges can be used\
 Serial port: Not Applicable\
 Message Latency (rate at which messages are received): variable (depends on network speed)\
+Indicators: Not Applicable\
 Displays: AWS Grafana Dashboard
