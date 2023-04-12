@@ -4,7 +4,7 @@ This repository contains code written for the remote, base, and cloud parts of t
 
 ## Remote Unit
 
-Hardware: Adafruit FeatherSense, PM 2.5 Particle Sensor, Adafruit GPS FeatherWing, Adafruit LoRa FeatherWing\
+Hardware: Adafruit FeatherSense, PM2.5 Air Quality Sensor, Adafruit Ultimate GPS FeatherWing, Adafruit LoRa Radio FeatherWing RFM95x set at 915 MHz\
 Code: C++ with compatible Arduino libraries\
 Serial port: Enabled (displays sent packets and debugging information)\
 Message Latency (rate at which messages are sent) : ~ 1 message per second
