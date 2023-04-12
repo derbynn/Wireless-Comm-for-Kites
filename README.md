@@ -1,4 +1,4 @@
-# Wireless Communication for Kite Based Sensors (MEM 42)
+# Wireless Communication for Kite Based Sensors
 
 This repository contains code written for the remote, base, and cloud parts of this project.
 
