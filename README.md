@@ -107,3 +107,54 @@ Configure your IoT device(raspberry pi) to use the AWS IoT endpoint, the downloa
 
 #### Test your setup:
 After configuring your IoT device, test the connection to AWS IoT Core by subscribing to a topic or publishing messages to a topic. You can use the AWS IoT Core 'Test' feature in the console to monitor messages.
+
+#### Setting up AWS Timestream
+AWS Timestream is a time-series database service designed for IoT and operational applications. It provides fast and scalable ingestion and querying of time-series data. To set up AWS Timestream, follow these steps:
+1. Sign in to the AWS Management Console:
+- Sign in to your AWS account at https://aws.amazon.com/console/. If you don't have an account yet, create one by following the instructions on the website.
+2. Create an Amazon Timestream database:
+- In the AWS Management Console, navigate to the Amazon Timestream service by typing "Timestream" in the search bar and selecting it from the list of services.
+- On the Amazon Timestream home page, click on "Create database".
+- Enter a name for your database, choose an optional description, and select a retention policy for your data. The retention policy defines how long your data will be stored in the memory store and magnetic store.
+- Click on "Create" to create the database.
+3. Create a table:
+- In the Timestream console, select the newly created database.
+- Click on "Create table".
+- Enter a name for your table and select a memory store retention period. Optionally, you can also add tags for your table.
+- Click on "Create" to create the table.
+4. Documentation for reference: https://docs.aws.amazon.com/timestream/latest/developerguide/what-is-timestream.html
+
+
+#### Setting up an AWS IoT Core Rule to ingest data into Timestream:
+1. Navigate to the AWS IoT Core console (https://console.aws.amazon.com/iot).
+2. In the navigation pane in the left-hand menu, click on "Manage", click on "Message routing", click on "Rules", then click on "Create rule".
+3. Enter a name and description(optional) for the rule.
+4. In the "Configure SQL statement" section, enter a SQL query to select data from the incoming IoT messages. 
+   - For example: **SELECT temperature, humidity FROM 'your/topic’** 
+   - ```SELECT <Attribute> FROM <Topic Filter> WHERE <Condition>```
+5. In the "Attach rule actions" section, click on "Add action", then select "Timestream table".
+6. Choose the Timestream database and table you created earlier. 
+   - Add dimensions for your table. 
+   -  if your Timestream table has columns Temp and Hum for storing these dimensions, you would map them like this:
+      - dimension key: Temp, value: ${Temp}
+      - dimension key: Hum, value: ${Hum}
+7. Click on "Create role" or select an existing role that allows IoT Core to write to Timestream.
+8. On the Review and create page: 
+ - Click on "Create" to finalize the rule creation.
+9. Connect your IoT devices to AWS IoT Core and start sending data:
+    - You need to set up your IoT devices to connect to AWS IoT Core and send data on the MQTT topic specified in your rule query statement. To do this, follow the AWS IoT Core documentation on connecting devices and sending messages: https://docs.aws.amazon.com/iot/latest/developerguide/iot-device-sdk.html
+  - Documentation: https://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html
+9. Once you've completed these steps, your IoT devices will send data to AWS IoT Core, which will then ingest the data into Timestream using the rule you've created. You can then query and analyze your time-series data in Timestream.
+
+#### Query your data on Timestream:
+Once you have ingested data into your Timestream table, you can query it using the Timestream Query console or the SDKs.
+For example, to query data in the Timestream Query console, follow these steps:
+- Navigate to the Timestream console.
+- Click on the "Query editor" tab.
+- Select your database and table from the dropdown menus.
+- Write a SQL query to analyze your data (e.g., **SELECT * FROM "MyTimestreamDB"."MyTimestreamTable" LIMIT 100;**).
+- Click "Run query."
+
+
+
+
