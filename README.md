@@ -67,21 +67,20 @@ There are 2 options for signing into AWS Management Console with distinct access
 In the AWS Management Console, search for 'IoT Core' in the 'Find Services' search bar or select it from the list of services under the 'Internet of Things' category.
 
 #### Create a Thing (a "thing" is a representation of a physical device or logical entity that you can connect to the AWS IoT platform. A thing can be any device that sends and receives data, such as sensors, microcontrollers, smartphones,etc):
-1. Click 'Manage' in the left-hand menu, and then click 'Things'.
+1. Click 'Manage' in the left-hand menu, and then click 'All Devices' and click 'Things'.
 2. Click 'Create things' and then 'Create a single thing'.
 3. Enter a name for your IoT device (Thing) and click 'Next'.
 4. (Optional) Register a certificate for your use case. **Auto-generate a new certificate is recommended by AWS**
 5. (Optional) Attach Policies if already created or create a new policy by clicking on 'Create Policy' to create a new policy(follow the policy instructions below)
 6. (Optional) You can add attributes and a Thing type, but for a basic setup, just click 'Create Thing' without adding these.
 
-#### Create certificates and keys (if you haven't already auto-generated a new certificate):
-1. After creating a Thing, you will be prompted to create certificates and keys. Click 'Create certificate'.
+#### Downloading certificates and keys:
+1. After creating a Thing, you will be prompted to download certificates and keys.
 2. Download the public key, private key, and certificate for your Thing.
-3. Click 'Activate' to activate the certificate.
-4. Click 'Done' to finish the process.
+3. Click 'Done' to finish the process.
 
 #### Attach a policy to the certificate:
-1. Click 'Secure' in the left-hand menu, and then click 'Policies'.
+1. Click 'Security' in the left-hand menu, and then click 'Policies'.
 2. Click 'Create' to create a new policy.
 3. Enter a name for the policy and add statements to define permissions. For a basic setup, you can use the following statement to allow all IoT actions:
 
@@ -94,12 +93,12 @@ In the AWS Management Console, search for 'IoT Core' in the 'Find Services' sear
 ```
 
 4. Click 'Create' to save the policy.
-5. Go back to the 'Certificates' section under the 'Secure' menu.
+5. Go back to the 'Certificates' section under the 'Security' menu.
 6. Find the certificate you created earlier, click the three dots on the right, and select 'Attach policy'.
 7. Select the policy you just created and click 'Attach'.
 
 #### Attach the certificate to the Thing:
-1. Go back to the 'Certificates' section under the 'Secure' menu.
+1. Go back to the 'Certificates' section under the 'Security' menu.
 2. Find the certificate you created earlier, click the three dots on the right, and select 'Attach thing'.
 3. Select the Thing you created and click 'Attach'.
 
