@@ -68,11 +68,13 @@ In the AWS Management Console, search for 'IoT Core' in the 'Find Services' sear
 
 #### Create a Thing (a "thing" is a representation of a physical device or logical entity that you can connect to the AWS IoT platform. A thing can be any device that sends and receives data, such as sensors, microcontrollers, smartphones,etc):
 1. Click 'Manage' in the left-hand menu, and then click 'Things'.
-2. Click 'Create' and then 'Create a single thing'.
+2. Click 'Create things' and then 'Create a single thing'.
 3. Enter a name for your IoT device (Thing) and click 'Next'.
-4. (Optional) You can add attributes and a Thing type, but for a basic setup, just click 'Create Thing' without adding these.
+4. (Optional) Register a certificate for your use case. **Auto-generate a new certificate is recommended by AWS**
+5. (Optional) Attach Policies if already created or create a new policy by clicking on 'Create Policy' to create a new policy(follow the policy instructions below)
+6. (Optional) You can add attributes and a Thing type, but for a basic setup, just click 'Create Thing' without adding these.
 
-#### Create certificates and keys:
+#### Create certificates and keys (if you haven't already auto-generated a new certificate):
 1. After creating a Thing, you will be prompted to create certificates and keys. Click 'Create certificate'.
 2. Download the public key, private key, and certificate for your Thing.
 3. Click 'Activate' to activate the certificate.
@@ -86,7 +88,7 @@ In the AWS Management Console, search for 'IoT Core' in the 'Find Services' sear
 ```
 {
    "Effect": "Allow",
-   "Action": "iot:*",
+   "Action": "*",
    "Resource": "*"
 }
 ```
