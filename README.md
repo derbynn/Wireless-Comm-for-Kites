@@ -60,8 +60,8 @@ If you don't already have an AWS account, go to https://aws.amazon.com/ and clic
 After creating an AWS account, sign in to the AWS Management Console at https://aws.amazon.com/console/.
 
 There are 2 options for signing into AWS Management Console with distinct access levels and privileges: the root user and IAM (Identity and Access Management) users
-1. Root user: The original account owner with full access to all AWS resources and services. Should be used sparingly and only for essential tasks such as  such as account billing management, changing the account's email address.
-2. IAM user: Created within an AWS account and can be assigned specific permissions to manage AWS resources. Should be used for everyday tasks and applications as a good security practice.
+1. **Root user**: The original account owner with full access to all AWS resources and services. Should be used sparingly and only for essential tasks such as  such as account billing management, changing the account's email address.
+2. **IAM user**: Created within an AWS account and can be assigned specific permissions to manage AWS resources. Should be used for everyday tasks and applications as a good security practice.
 
 #### Access AWS IoT Core service:
 In the AWS Management Console, search for 'IoT Core' in the 'Find Services' search bar or select it from the list of services under the 'Internet of Things' category.
