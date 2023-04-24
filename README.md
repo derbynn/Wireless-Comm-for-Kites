@@ -59,6 +59,10 @@ If you don't already have an AWS account, go to https://aws.amazon.com/ and clic
 #### Sign in to the AWS Management Console:
 After creating an AWS account, sign in to the AWS Management Console at https://aws.amazon.com/console/.
 
+There are 2 options for signing into AWS Management Console with distinct access levels and privileges: the root user and IAM (Identity and Access Management) users
+1. Root user: The original account owner with full access to all AWS resources and services. Should be used sparingly and only for essential tasks such as  such as account billing management, changing the account's email address.
+2. IAM user: Created within an AWS account and can be assigned specific permissions to manage AWS resources. Should be used for everyday tasks and applications as a good security practice.
+
 #### Access AWS IoT Core service:
 In the AWS Management Console, search for 'IoT Core' in the 'Find Services' search bar or select it from the list of services under the 'Internet of Things' category.
 
@@ -69,15 +73,15 @@ In the AWS Management Console, search for 'IoT Core' in the 'Find Services' sear
 4. (Optional) You can add attributes and a Thing type, but for a basic setup, just click 'Create Thing' without adding these.
 
 #### Create certificates and keys:
-a. After creating a Thing, you will be prompted to create certificates and keys. Click 'Create certificate'.
-b. Download the public key, private key, and certificate for your Thing.
-c. Click 'Activate' to activate the certificate.
-d. Click 'Done' to finish the process.
+1. After creating a Thing, you will be prompted to create certificates and keys. Click 'Create certificate'.
+2. Download the public key, private key, and certificate for your Thing.
+3. Click 'Activate' to activate the certificate.
+4. Click 'Done' to finish the process.
 
 #### Attach a policy to the certificate:
-a. Click 'Secure' in the left-hand menu, and then click 'Policies'.
-b. Click 'Create' to create a new policy.
-c. Enter a name for the policy and add statements to define permissions. For a basic setup, you can use the following statement to allow all IoT actions:
+1. Click 'Secure' in the left-hand menu, and then click 'Policies'.
+2. Click 'Create' to create a new policy.
+3. Enter a name for the policy and add statements to define permissions. For a basic setup, you can use the following statement to allow all IoT actions:
 
 ```
 {
@@ -87,15 +91,15 @@ c. Enter a name for the policy and add statements to define permissions. For a b
 }
 ```
 
-d. Click 'Create' to save the policy.
-e. Go back to the 'Certificates' section under the 'Secure' menu.
-f. Find the certificate you created earlier, click the three dots on the right, and select 'Attach policy'.
-g. Select the policy you just created and click 'Attach'.
+4. Click 'Create' to save the policy.
+5. Go back to the 'Certificates' section under the 'Secure' menu.
+6. Find the certificate you created earlier, click the three dots on the right, and select 'Attach policy'.
+7. Select the policy you just created and click 'Attach'.
 
 #### Attach the certificate to the Thing:
-a. Go back to the 'Certificates' section under the 'Secure' menu.
-b. Find the certificate you created earlier, click the three dots on the right, and select 'Attach thing'.
-c. Select the Thing you created and click 'Attach'.
+1. Go back to the 'Certificates' section under the 'Secure' menu.
+2. Find the certificate you created earlier, click the three dots on the right, and select 'Attach thing'.
+3. Select the Thing you created and click 'Attach'.
 
 #### Set up your IoT device:
 Configure your IoT device(raspberry pi) to use the AWS IoT endpoint, the downloaded certificate, and private key to connect to AWS IoT Core. 
