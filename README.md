@@ -49,7 +49,7 @@ This repository contains code written for the remote, base, and cloud parts of t
 3. In ~/base, you can open the shell either on the raspberry pi or through an SSH connection and run the base.py script.
 4. Upon establishment of communication with the transmitting LoRa, the LoRa module will initiate reception and concurrently display the incoming packets on the terminal, while simultaneously transmitting it to AWS.
 
-### Cloud
+### Cloud Unit
 #### Setting Up an AWS IoT for Raspberry pi connection
 Setting up an AWS IoT account involves creating an AWS account, configuring AWS IoT services, and setting up IoT devices. Here are the steps to get started:
 
