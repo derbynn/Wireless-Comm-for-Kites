@@ -38,7 +38,7 @@ This repository contains code written for the remote, base, and cloud parts of t
 **Indicators**: LEDs\
 **Displays**: Touchscreen, external display compatible
 
-### Cloud
+### Cloud Unit
 **Hardware**: None\
 **Code**: Query Language for AWS Timestream, other programming langauges can be used\
 **Serial port**: Not Applicable\
