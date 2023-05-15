@@ -156,5 +156,30 @@ For example, to query data in the Timestream Query console, follow these steps:
 - Click "Run query."
 
 
+### References 
+[1] A. Industries, "Adafruit Feather NRF52840 sense," adafruit industries blog RSS. [Online]. Available: https://www.adafruit.com/product/4516. [Accessed: Oct. 26, 2022].
 
+[2] "Final Report: Mapping Air Quality with Kite-Based Sensors," EPA, Apr. 16, 2020. [Online]. Available: https://cfpub.epa.gov/ncer_abstracts/index.cfm/fuseaction/display.abstractDetail/abstract_id/10944/report/F. [Accessed: Oct. 26, 2022].
+
+[3] R. Andrews, "Weather Forecast with Meteodrones Weather Drones," Meteomatics, 2021. [Online]. Available: https://www.meteomatics.com/en/meteodrones-weather-drones/.
+
+[4] "Automating Your Home with Grafana and Siemens Controllers," AWS Architecture Blog, Amazon Web Services, Nov. 26, 2019. [Online]. Available: https://aws.amazon.com/blogs/architecture/automating-your-home-with-grafana-and-siemens-controllers/. [Accessed: Mar. 9, 2023].
+
+[5] "Dasaki Ramps 1.4 Enclosure/Box/Case," UltiMaker Thingverse. [Online]. Available: https://www.thingiverse.com/thing:761806. [Accessed: May 9, 2023].
+
+[6] "Magnetic tissue box mount," UltiMaker Thingverse. [Online]. Available: https://www.thingiverse.com/thing:3151805. [Accessed: May 9, 2023].
+
+[7] G. Bland et al., "Aerokats and Rover," NASA/ADS, 2015. [Online]. Available: ui.adsabs.harvard.edu/abs/2015AGUFMED51C0830B/abstract. [Accessed: May 15, 2023].
+
+[8] "Haversine formula in Python (bearing and distance between two GPS points)," Stack Overflow. [Online]. Available: https://stackoverflow.com/questions/4913349/haversine-formula-in-python-bearing-and-distance-between-two-gps-points. [Accessed: May 15, 2023].
+
+[9] Adafruit Industries, "Adafruit Ultimate GPS FeatherWing Arduino Library," Adafruit Learning System. [Online]. Available: https://learn.adafruit.com/adafruit-ultimate-gps-featherwing/arduino-library. [Accessed: May 15, 2023].
+
+[10] Python Software Foundation, "re - Regular expression operations," Python Documentation. [Online]. Available: https://docs.python.org/3/library/re.html. [Accessed: May 15, 2023].
+
+[11] Google Developers, "Python Regular Expressions," Google Developers. [Online]. Available: https://developers.google.com/edu/python/regular-expressions. [Accessed: May 15, 2023].
+
+[12] Adafruit Industries, "Adafruit Feather Sense Arduino Sensor Example," Adafruit Learning System. [Online]. Available: https://learn.adafruit.com/adafruit-feather-sense/arduino-sensor-example. [Accessed: May 15, 2023].
+
+[13] Adafruit Forums, "GPS Testing and Interpretation," Adafruit Forums. [Online]. Available: https://forums.adafruit.com/viewtopic.php?t=30776. [Accessed: May 15, 2023].
 
