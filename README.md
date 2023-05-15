@@ -2,6 +2,22 @@
 
 This repository contains code written for the remote, base, and cloud parts of this project.
 
+## Table of Contents
+
+1. [Features](#features)
+   - [Remote Unit](#remote-unit)
+   - [Base Unit](#base-unit)
+   - [Cloud](#cloud)
+
+2. [Setup](#setup)
+   - [Remote Unit](#remote-unit-1)
+   - [Base Unit](#base-unit-1)
+   - [Cloud Unit](#cloud-unit)
+      - [Setting Up an AWS IoT for Raspberry Pi connection](#setting-up-an-aws-iot-for-raspberry-pi-connection)
+      - [Setting up AWS Timestream](#setting-up-aws-timestream)
+
+3. [References](#references)
+
 ## Features
 
 ### Remote Unit
