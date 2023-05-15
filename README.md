@@ -1,6 +1,8 @@
 # Wireless Communication for Networking Kite-Based Sensors
 
-This repository contains code written for the remote, base, and cloud parts of this project.
+This repository contains code written for the remote, base, and cloud parts of this project. The project focuses on creating a wireless communication network for kites using LoRa technology to transmit data from remote units to a base unit. The base unit then forwards the data to the cloud for storage and analysis. 
+
+The repository is organized into three main sections: Remote, Base, and Cloud Unit. Each section contains code specific to that component, along with instructions for setup and usage. The Remote Unit code is written in C++ with compatible Arduino libraries, while the Base Unit code is written in Python 3 with compatible libraries. The Cloud section involves querying data stored in AWS Timestream using SQL and visualizing the data in AWS Managed Grafana.
 
 ## Table of Contents
 
