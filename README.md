@@ -69,7 +69,12 @@ The repository is organized into three main sections: Remote, Base, and Cloud Un
 
 ### Running the Base Unit with commands
 1. Follow step 1 and 2 above.
-2. Make sure the folders 
+2. Make sure the folders 'Errors' and 'Tests' have been created for saving all the packets from the field test. Validated packets and packets with errors go to 'Errors' and 'Tests' respectively. This allows the user to check the files later since they are saved by time and date in the folders.
+3. The menu displays 3 options for running the Tests
+   - 1 - command to send test data to AWS as it is being collected
+   - 2 - this command is used to collect data in a debug mode. Data collected will be saved but not sent to AWS and the user can ensure that everything being collected is to their liking before choosing mode 1.
+   - 3 - command for collecting gps cordinates from the remote unit and use the gps cordinates for the ground unit for distance calculations
+*data will always be saved to the raspberry pi for back up
 
 ### Cloud Unit
 #### Setting Up an AWS IoT for Raspberry pi connection
